@@ -7,7 +7,13 @@ html, body {
   padding: 0;
   margin: 0;
 }
-
+td{
+  padding-right: 250px;
+}
+table {
+  border-spacing: 30px;
+  border-collapse: collapse;
+}
 * {
   font-family: 'Open Sans', sans-serif;
 }
