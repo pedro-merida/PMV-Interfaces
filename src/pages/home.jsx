@@ -28,7 +28,7 @@ export const HomePage = () => {
                                                     <td>Vacantes disponibles: 120</td>
                                                     <td class=" text-center">
                                                         <div class="btn-group btn-group-sm" role="group">
-                                                            <a href="/" target="_blank" class="btn btn-sm btn-outline-info" rel="tooltip" data-toggle="tooltip" data-original-title="Ir a vacantes">Ver Asignaturas</a>
+                                                            <a href="/internal" target="_blank" class="btn btn-sm btn-outline-info" rel="tooltip" data-toggle="tooltip" data-original-title="Ir a vacantes">Ver Asignaturas</a>
                                                             
                                                         </div>
                                                     </td>
