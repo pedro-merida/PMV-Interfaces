@@ -1,6 +1,7 @@
-import React from 'react'
+import React, { useState } from 'react';
+import Alert from 'react-bootstrap/Alert';
 
-import NavBar from '../components/nav_bar'
+import NavBar from '../components/nav_bar' 
 
 export const HomePage = () => {
   return (
@@ -39,7 +40,7 @@ export const HomePage = () => {
                                                     <td>Vacantes disponibles: 102</td>
                                                     <td class=" text-center">
                                                         <div class="btn-group btn-group-sm" role="group">
-                                                            <a href="/" target="_blank" class="btn btn-sm btn-outline-info" rel="tooltip" data-toggle="tooltip" data-original-title="Ir a vacantes">Ver Asignaturas</a>
+                                                            <button onClick={() => alert('La asignatura esta temporalmente en mantenimiento')} class="btn btn-sm btn-outline-info" rel="tooltip" data-toggle="tooltip" data-original-title="Ir a vacantes">Ver Asignaturas</button>
                                                             
                                                         </div>
                                                     </td>
@@ -51,7 +52,7 @@ export const HomePage = () => {
                                                     <td>Vacantes disponibles: 160</td>
                                                     <td class=" text-center">
                                                         <div class="btn-group btn-group-sm" role="group">
-                                                            <a href="/" target="_blank" class="btn btn-sm btn-outline-info" rel="tooltip" data-toggle="tooltip" data-original-title="Ir a vacantes">Ver Asignaturas</a>
+                                                            <button onClick={() => alert('La asignatura esta temporalmente en mantenimiento')} class="btn btn-sm btn-outline-info" rel="tooltip" data-toggle="tooltip" data-original-title="Ir a vacantes">Ver Asignaturas</button>
                                                             
                                                         </div>
                                                     </td>
