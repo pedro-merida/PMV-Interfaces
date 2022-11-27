@@ -25,7 +25,7 @@ export const HomePage = () => {
                                                     <td>
                                                         <a>Ingeniería Informática 2023-1</a>
                                                     </td>
-                                                    <td>Vacantes disponibles: 120</td>
+                                                    <td>Vacantes disponibles: 17</td>
                                                     <td class=" text-center">
                                                         <div class="btn-group btn-group-sm" role="group">
                                                             <a href="/internal" target="_blank" class="btn btn-sm btn-outline-info" rel="tooltip" data-toggle="tooltip" data-original-title="Ir a vacantes">Ver Asignaturas</a>

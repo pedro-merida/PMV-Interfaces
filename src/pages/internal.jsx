@@ -12,28 +12,13 @@ import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
+import SearchIcon from '@mui/icons-material/Search';
 import NavBar from '../components/nav_bar'
-function createData(Sigla, Nombre) {
+function createData(Sigla, Nombre,history) {
   return {
     Sigla,
     Nombre,
-    history: [
-      {
-        Paralelo: '200',
-        Profesor: 'Luis Padrique',
-        Campus: 'San Joaquin',
-        Vacantes: 2,
-        Horas: 'Contacto: 4 hrs \n Correccion: 2 hrs \n Laboratorio: 2 hrs \n Total: 8 hrs',
-
-      },
-      {
-        Paralelo: '201',
-        Profesor: 'Jesucristo',
-        Campus: 'San Joaquin',
-        Vacantes: 1,
-        Horas: 'Contacto: 4 hrs \n Correccion: 2 hrs \n Laboratorio: 2 hrs \n Total: 8 hrs',
-      },
-    ],
+    history,
   };
 }
 
@@ -70,7 +55,7 @@ function Row(props) {
                     <TableCell align="right">Campus</TableCell>
                     <TableCell align="right">Vacantes</TableCell>
                     <TableCell align="right">Horas</TableCell>
-                    <TableCell align="right"></TableCell>
+                    <TableCell align="right">Acción</TableCell>
                   </TableRow>
                 </TableHead>
                 <TableBody>
@@ -86,6 +71,11 @@ function Row(props) {
                       </TableCell>
                       <TableCell align="right">
                         {historyRow.Horas}
+                      </TableCell>
+                      <TableCell align="right">
+                        <div class="btn-group btn-group-sm" role="group">
+                          <button onClick={() => alert('Postulación completada, solo queda esperar los resultados :)')} class="btn btn-sm btn-outline-info" rel="tooltip" data-toggle="tooltip" data-original-title="Ir a vacantes">Postular</button>
+                        </div>
                       </TableCell>
                     </TableRow>
                   ))}
@@ -116,9 +106,74 @@ Row.propTypes = {
 };
 
 const rows = [
-  createData('INF-1212','AAAAA'),
-  createData('INF-823','DASDAS'),
-  createData('INF-312','DSFASDFA'),
+  createData('INF-266','Sistemas de Gestion',[
+    {
+      Paralelo: '200',
+      Profesor: 'Octavio Vasquez',
+      Campus: 'San Joaquin',
+      Vacantes: 3,
+      Horas: 'Contacto: 4 hrs \n Correccion: 11 hrs \n Laboratorio: 0 hrs \n Total: 15 hrs',
+
+    },
+  ]),
+  createData('INF-285','Computacion Cientifica',[
+    {
+      Paralelo: '200',
+      Profesor: 'Claudio Torres',
+      Campus: 'San Joaquin',
+      Vacantes: 2,
+      Horas: 'Contacto: 4 hrs \n Correccion: 11 hrs \n Laboratorio: 0 hrs \n Total: 15 hrs',
+
+    },
+    {
+      Paralelo: '200',
+      Profesor: 'Claudio Torres',
+      Campus: 'San Joaquin',
+      Vacantes: 3,
+      Horas: 'Contacto: 0 hrs \n Correccion: 11 hrs \n Laboratorio: 4 hrs \n Total: 15 hrs',
+    },
+  ]),
+  createData('INF-253','Lenguajes de Programación',[
+    {
+      Paralelo: '200',
+      Profesor: 'Jose Marti',
+      Campus: 'San Joaquin',
+      Vacantes: 2,
+      Horas: 'Contacto: 4 hrs \n Correccion: 2 hrs \n Laboratorio: 2 hrs \n Total: 8 hrs',
+
+    },
+    {
+      Paralelo: '201',
+      Profesor: 'Roberto Diaz',
+      Campus: 'San Joaquin',
+      Vacantes: 1,
+      Horas: 'Contacto: 4 hrs \n Correccion: 2 hrs \n Laboratorio: 2 hrs \n Total: 8 hrs',
+    },
+    {
+      Paralelo: '202',
+      Profesor: 'Jorge Diaz',
+      Campus: 'San Joaquin',
+      Vacantes: 1,
+      Horas: 'Contacto: 4 hrs \n Correccion: 2 hrs \n Laboratorio: 2 hrs \n Total: 8 hrs',
+    },
+  ]),
+  createData('INF-155','Informatica Teorica',[
+    {
+      Paralelo: '200',
+      Profesor: 'Andrés Moreira',
+      Campus: 'San Joaquin',
+      Vacantes: 3,
+      Horas: 'Contacto: 4 hrs \n Correccion: 11 hrs \n Laboratorio: 0 hrs \n Total: 15 hrs',
+
+    },
+    {
+      Paralelo: '202',
+      Profesor: 'Javier Robledo',
+      Campus: 'San Joaquin',
+      Vacantes: 2,
+      Horas: 'Contacto: 4 hrs \n Correccion: 11 hrs \n Laboratorio: 0 hrs \n Total: 15 hrs',
+    },
+  ]),
 ];
 export const InternalPage = () => {
   return (
@@ -137,7 +192,7 @@ export const InternalPage = () => {
                           <div class="col-md-12">
                           <div class="container-fluid">
                               <form class="d-flex" role="search">
-                                <button class="btn btn-outline-success" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+                                <button class="btn btn-outline-success btn-sm" type="submit"><SearchIcon color="disabled" fontSize="small" /></button>
                                 <input class="form-control me-2" type="search" placeholder="Buscar Asignatura" aria-label="Search"></input>
                               </form>
                             </div>
