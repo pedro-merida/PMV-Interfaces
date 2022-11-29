@@ -1,27 +1,24 @@
-# frontend-sample-app
-Basic Frontend Development Environment to start an app with Webpack
+Para poder utilizar nuestra aplicacion, ejecutar el siguiente comando:
 
-This repo includes `Webpack` to start an environment to build frontend views using `React`.
+```
+git clone -b inicio --single-branch https://github.com/pedro-merida/PMV-Interfaces.git
+```
 
-### Requirements
-- Node >= 16.13.1
-- npm >= 8.1.2
+### Como correr
 
-### Quick start
-
-Install dependences
+En la carpeta de la aplicacion ejecutar el siguiente comando para instalar dependencias
 
 ```
 npm install
 ```
 
-Launch environment
+Luego ejecutar el siguiente comando para levantar la aplicacion
 
 ```
 npm run dev
 ```
 
-Now you can open http://localhost:5050
+Finalmente, acceder a http://localhost:5050 para interactuar con la interfaz
 
 ### Packages included
 - [Webpack](https://webpack.js.org/)
